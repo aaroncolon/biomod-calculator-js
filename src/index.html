@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BioMOD Calculator - Vanilla JS</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div class="site">
+      <header class="site-header">
+        <h1>BioMOD Calculator</h1>
+        <h2>Monthly Surcharge Calculation</h2>
+      </header>
+      <div class="site-content">
+
+        <div id="biomod-calculator">
+          <form id="form-biomod">
+            <div class="form-group clearfix">
+              <label htmlFor="waste-water-flow">Waste Water Flow - (Gallons / Day)</label>
+              <input 
+                class="form-control"
+                id="waste-water-flow" 
+                type="number" 
+                value="50000"
+                min="1"
+                required />
+            </div>
+
+            <div class="form-group clearfix">
+              <label htmlFor="bod-concentration-before">BOD Concentration - mg/l (ppm)</label>
+              <input 
+                class="form-control"
+                id="bod-concentration-before" 
+                type="number" 
+                value="2500"
+                min="1"
+                required />
+            </div>
+
+            <div class="form-group clearfix">
+              <label htmlFor="bod-lbs-before">BOD in Lbs for Surcharge Calculation - Lbs / Day</label>
+              <input 
+                class="form-control"
+                id="bod-lbs-before" 
+                type="number" 
+                readOnly 
+                disabled />
+            </div>
+
+            <div class="form-group clearfix">
+              <label htmlFor="bod-treatment-surcharge">BOD Treatment Surcharge - USD / Lbs</label>
+              <input 
+                class="form-control"
+                id="bod-treatment-surcharge" 
+                type="number" 
+                value="2"
+                min="1"
+                required />
+            </div>
+
+            <div class="form-group clearfix">
+              <label htmlFor="daily-bill-before">Daily Bill - USD</label>
+              <input 
+                class="form-control"
+                id="daily-bill-before" 
+                type="number" 
+                value="0"
+                readOnly 
+                disabled />
+            </div>
+
+            <div class="form-group clearfix">
+              <label htmlFor="monthly-bill-before">Monthly Bill - USD</label>
+              <input 
+                class="form-control"
+                id="monthly-bill-before" 
+                type="number" 
+                value="0"
+                readOnly 
+                disabled />
+            </div>
+
+            <hr />
+
+            <div class="form-group clearfix">
+              <label htmlFor="bod-removal-efficiency">Install BioMod product with BOD remove efficiency of</label>
+              <input 
+                class="form-control"
+                id="bod-removal-efficiency" 
+                type="number" 
+                value="85"
+                min="1" 
+                max="99" 
+                step="1" 
+                required />
+            </div>
+
+            <div class="form-group clearfix">
+              <label htmlFor="bod-concentration-after">Reduced BOD Concentration mg/l (ppm)</label>
+              <input 
+                class="form-control"
+                id="bod-concentration-after" 
+                type="text" 
+                value="0"
+                readOnly 
+                disabled />
+            </div>
+
+            <div class="form-group clearfix">
+              <label htmlFor="bod-lbs-after">BOD in Lbs for Surcharge Calculation Lbs/Day</label>
+              <input 
+                class="form-control"
+                id="bod-lbs-after" 
+                type="number" 
+                value="0"
+                readOnly 
+                disabled />
+            </div>
+
+            <div class="form-group clearfix">
+              <label htmlFor="daily-bill-after"><strong>New Daily Bill - USD</strong></label>
+              <input 
+                class="form-control"
+                id="daily-bill-after" 
+                type="number" 
+                value="0" 
+                readOnly 
+                disabled />
+            </div>
+
+            <div class="form-group clearfix">
+              <label htmlFor="monthly-bill-after"><strong>New Monthly Bill - USD</strong></label>
+              <input 
+                class="form-control"
+                id="monthly-bill-after" 
+                type="number" 
+                value="0" 
+                readOnly 
+                disabled />
+            </div>
+
+            <div class="form-group clearfix">
+              <label htmlFor="total-savings"><strong>Total Savings/Month with BioMOD DAF + MBBR</strong></label>
+              <input 
+                class="form-control"
+                id="total-savings" 
+                type="number" 
+                value="0" 
+                readOnly 
+                disabled />
+            </div>
+
+            <div class="form-group clearfix">
+              <label htmlFor="total-savings-percent"><strong>Savings Per Month</strong></label>
+              <input 
+                class="form-control"
+                id="total-savings-percent" 
+                type="text" 
+                value="0" 
+                readOnly 
+                disabled />
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
